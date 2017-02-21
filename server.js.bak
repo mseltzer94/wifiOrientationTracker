@@ -1,0 +1,29 @@
+var express = require('express')
+var app = express()
+var spawn = require('child_process').spawn;
+var yaw = 0;
+var accum = '';
+
+var child = spawn('./mstest', []);
+child.stdout.setEncoding('utf8');
+child.stdout.on('data', function(data){
+		data = data.split('\n');
+		if (data.length <= 1){
+			accum+=data;
+		} else {
+			accum+=data[0];
+			yaw = accum;
+			console.log(yaw);
+			accum = data[1];
+		}
+	}
+)
+
+app.get('/', function (req, res) {
+  res.send('hello');
+})
+
+app.listen(3000, function () {
+  	console.log('Example app listening on port 3000!')
+})
+
