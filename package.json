@@ -9,7 +9,7 @@
     "i2c-bus": "^1.2.1",
     "i2c-mpu6050": "^2.2.1",
     "mpu6050": "^0.1.2",
-    "mpu6050-dmp": "0.0.6",
+    "mpu6050-dmp": "git+https://github.com/mseltzer94/mpu6050-dmp.git",
     "read-last-lines": "^1.1.0",
     "socket.io": "^1.7.3"
   },
