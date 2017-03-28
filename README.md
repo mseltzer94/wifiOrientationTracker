@@ -8,5 +8,5 @@ Setup:
   ```
     cp headTracker /etc/init.d
     chmod 755 /etc/init.d/headTracker
-    update-rd.d headTracker defaults
+    update-rc.d headTracker defaults
   ```
