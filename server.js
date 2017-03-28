@@ -29,13 +29,13 @@ if (mpu.initialize()){
 		} else {
 			console.log("failed to update!");
 		}
-}, 50);
+}, 20);
 }
 
 
 
 app.get('/', function (req, res) {
-	res.send(data);
+	res.send(new Date() + "\n" + data);
 })
 
 app.listen(9000, function () {
